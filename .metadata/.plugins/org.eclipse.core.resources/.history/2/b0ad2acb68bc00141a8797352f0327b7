@@ -1,0 +1,76 @@
+package gooey;
+
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class TEMP extends JFrame {
+
+	private static JFrame frame;
+	private static JTabbedPane tp, patientTP, procedureTP, paymentTP;
+
+	public TEMP () {
+
+		this.createMainDisplay();
+	}
+
+	public void createMainDisplay(){
+
+		frame 	= 	new JFrame 	("Dentist Administration System");
+		frame.setDefaultCloseOperation	(JFrame.EXIT_ON_CLOSE);
+
+		tp 		= 	new JTabbedPane();
+		//creates tabs
+		patientTP 	= 	new JTabbedPane();
+		procedureTP =  	new JTabbedPane();
+		paymentTP 	= 	new JTabbedPane();
+		tp.addTab	("Patient", patientTP);
+		tp.add		("Procedures", procedureTP);
+		tp.add		("Payments", paymentTP);
+		//set layout of first tab
+		patientTP.setLayout	(new BoxLayout(patientTP, BoxLayout.Y_AXIS));
+		//create panels
+		JPanel patMain 		= 	new JPanel();
+		JPanel deletePat 	= 	new JPanel();
+		JPanel listPat 		= 	new JPanel();
+		patientTP.add			(patMain);
+		patMain.setBackground	(Color.red);
+		patMain.setLayout		(new BoxLayout(patMain, BoxLayout.Y_AXIS));
+		//create inner panels
+		JPanel top			=	new JPanel();
+		JPanel middle		=	new JPanel();
+		JPanel bottom		=	new JPanel();
+		patMain.add(top);
+		top.setBackground(Color.green);
+		patMain.add(middle);
+		middle.setBackground(Color.YELLOW);
+		patMain.add(bottom);
+		bottom.setSize(new Dimension(100,200));
+		
+		
+
+	//	addPat.add				(deletePat);
+
+
+		frame.getContentPane	().add	(tp); 
+		frame.pack				();
+		frame.setVisible		(true);
+
+	}
+
+	public static void main(String[] args) {
+
+
+		new TEMP();
+		frame.setVisible(true);
+		frame.setSize(390,450);
+		frame.isAlwaysOnTop();
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}

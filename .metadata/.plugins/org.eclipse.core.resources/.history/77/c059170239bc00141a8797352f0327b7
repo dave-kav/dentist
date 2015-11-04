@@ -1,0 +1,62 @@
+package gooey;
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class TEMP extends JFrame {
+	
+	private static JFrame frame;
+    private static JTabbedPane tp, patientTP, procedureTP, paymentTP;
+    
+    
+    public TEMP () {
+    
+        this.createMainDisplay();
+    }
+    
+    public void createMainDisplay(){
+        
+        frame = new JFrame ("Dentist Administration System");
+        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        //MyController controller = new MyController();
+        
+        tp = new JTabbedPane();
+        
+        patientTP = new JTabbedPane();
+        tp.addTab("Patient", patientTP);
+        JPanel addPat = new JPanel();
+        JPanel deletePat = new JPanel();
+        JPanel listPat = new JPanel();
+        
+        patientTP.setLayout(new BorderLayout());
+        
+        patientTP.add(addPat, BorderLayout.CENTER);
+        addPat.setBackground(Color.red);
+        
+        patientTP.add(deletePat, BorderLayout.NORTH);
+        addPat.setBackground(Color.blue);
+        
+        patientTP.add(listPat, BorderLayout.EAST);
+        addPat.setBackground(Color.yellow);
+        
+        frame.getContentPane().add(tp); 
+        frame.pack();
+        frame.setVisible(true);
+        
+        
+    }
+
+    public static void main(String[] args) {
+        
+        
+        new TEMP();
+        frame.setSize(800, 700);
+
+
+
+}
+	
+}

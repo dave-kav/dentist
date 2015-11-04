@@ -1,0 +1,42 @@
+=============================
+=====LATE PAYMENT REPORT=====
+=============================
+Christ, Jesus
+Patient Number: 2
+Nazareth
+N/A
+-----------
+Payments
+1
+10/10/2000
+10.0
+-----------
+Total Owed: 399.97
+-----------
+-----------
+Swan, John
+Patient Number: 4
+The Lough
+0215464987
+-----------
+Payments
+3
+10/02/2013
+12.0
+-----------
+Total Owed: 187.99
+-----------
+-----------
+Duck, Daffy
+Patient Number: 3
+Pond
+321321654
+-----------
+Payments
+2
+10/10/2013
+1.0
+-----------
+Total Owed: 48.99
+-----------
+-----------
